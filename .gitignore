@@ -1,0 +1,6 @@
+deploy
+**/deploy
+**/classes
+*~
+**/*.lck
+.data/

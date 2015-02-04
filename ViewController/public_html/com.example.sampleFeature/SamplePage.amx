@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Header" id="ot1"/>
+    </amx:facet>
+    <amx:iterator var="row" value="#{bindings.persons.collectionModel}" id="i1">
+      <amx:panelLabelAndMessage label="#{bindings.persons.hints.firstName.label}" id="plam2">
+        <amx:outputText value="#{row.firstName}" id="ot3"/>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.persons.hints.lastName.label}" id="plam1">
+        <amx:outputText value="#{row.lastName}" id="ot2"/>
+      </amx:panelLabelAndMessage>
+    </amx:iterator>
+  </amx:panelPage>
+</amx:view>

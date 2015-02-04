@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="SamplePagePageDef"
+                Package="com.example.sampleFeature">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="PersonBean" id="PersonBeanIterator"/>
+    <accessorIterator MasterBinding="PersonBeanIterator" Binds="persons" RangeSize="25" DataControl="PersonBean"
+                      BeanClass="com.example.mobile.model.Person" id="personsIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="personsIterator" id="persons">
+      <nodeDefinition DefName="com.example.mobile.model.Person" Name="persons0">
+        <AttrNames>
+          <Item Value="firstName"/>
+          <Item Value="lastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
